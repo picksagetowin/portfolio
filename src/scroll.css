@@ -1,0 +1,34 @@
+.carousel-shell { min-width: 0; }
+.carousel { display: block; touch-action: pan-y pinch-zoom; }
+.carousel-track, .carousel-group { display: flex; gap: 18px; width: max-content; position: relative; }
+.carousel-group { flex: none; }
+.carousel-loop { scroll-snap-type: none; scroll-behavior: auto; overflow-anchor: none; overscroll-behavior-x: contain; }
+.carousel-loop .paper { scroll-snap-align: none; }
+.carousel-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #d7ff4f; font-size: 9px; letter-spacing: 1px; }
+.carousel-toolbar button { color: #aaa; border: 1px solid #444; background: transparent; padding: 8px 12px; font-size: 11px; }
+.carousel-toolbar button:hover { color: #d7ff4f; border-color: #d7ff4f; }
+.carousel:focus-visible { outline: 1px solid #d7ff4f; outline-offset: 4px; }
+.project-actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 9px; }
+.sync-button, .auth-toggle { border: 1px solid #4a4a4a; background: transparent; color: #ddd; padding: 11px 13px; font-size: 10px; letter-spacing: .3px; cursor: pointer; }
+.sync-button:hover:not(:disabled), .auth-toggle:hover { border-color: #d7ff4f; color: #d7ff4f; }
+.sync-button:disabled { color: #777; cursor: not-allowed; }
+.cloud-status, .cloud-help { max-width: 850px; margin: -18px 0 0; color: #b9b9b9; font-size: 12px; line-height: 1.7; }
+.cloud-help { color: #8c8c8c; }
+.cloud-help code { color: #d7ff4f; }
+.auth-form { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 10px; max-width: 850px; padding: 16px; border: 1px solid #373737; background: #121212; }
+.auth-heading { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; color: #eee; font-size: 13px; }
+.auth-toggle { padding: 8px 10px; }
+.auth-form input { min-width: 0; background: #0d0d0d; border: 1px solid #333; color: #eee; padding: 12px; font: inherit; font-size: 12px; }
+.auth-form > button { border: 1px solid #555; background: transparent; color: #d7ff4f; padding: 12px; font-size: 11px; cursor: pointer; }
+.auth-form > button:hover:not(:disabled) { background: #d7ff4f; color: #111; }
+.auth-form > button:disabled { opacity: .6; }
+@media (max-width: 760px) {
+  .panel { scroll-margin-top: 58px; }
+  .carousel-toolbar { flex-wrap: wrap; }
+  .project-actions { justify-content: flex-start; }
+  .auth-form { grid-template-columns: 1fr; }
+  .auth-heading { flex-wrap: wrap; gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,127 @@
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.sync-button,
+.auth-form button,
+.auth-toggle,
+.project-edit-actions button {
+  border: 1px solid #555;
+  background: transparent;
+  color: #eee;
+  padding: 11px 14px;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .7px;
+  cursor: pointer;
+}
+
+.sync-button:hover,
+.auth-form button:hover,
+.project-edit-actions button:hover {
+  border-color: #d7ff4f;
+  color: #d7ff4f;
+}
+
+.sync-button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.cloud-status,
+.cloud-help {
+  margin: -18px 0 0;
+  color: #a7a7a7;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.cloud-help code {
+  color: #d7ff4f;
+}
+
+.auth-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  max-width: 900px;
+}
+
+.auth-heading {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #f3f0e8;
+  font-size: 13px;
+}
+
+.auth-toggle {
+  border: 0;
+  color: #d7ff4f;
+  padding: 4px 0;
+}
+
+.auth-form input {
+  min-width: 0;
+  background: #121212;
+  border: 1px solid #333;
+  color: #eee;
+  padding: 13px;
+  font: inherit;
+  font-size: 12px;
+}
+
+.auth-form button:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
+.project-card-wrap {
+  width: min(330px, 78vw);
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-snap-align: start;
+}
+
+.project-card-wrap .project-card {
+  width: 100%;
+  flex: 1;
+}
+
+.project-edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.project-edit-actions button {
+  flex: 1;
+  color: #d7ff4f;
+}
+
+@media (max-width: 760px) {
+  .project-actions,
+  .auth-form {
+    width: 100%;
+  }
+
+  .auth-form {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-heading {
+    grid-column: auto;
+  }
+
+  .project-card-wrap {
+    width: min(300px, 78vw);
+  }
+}
